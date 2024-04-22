@@ -138,6 +138,13 @@ function crearMensajeFinal(resultadoFinal) {
   parrafo.innerHTML = resultadoFinal;
 
   sectionMensajes.appendChild(parrafo);
+
+  let botonFuego = document.getElementById("boton-fuego");
+  botonFuego.disabled = true;
+  let botonAgua = document.getElementById("boton-agua");
+  botonAgua.disabled = true;
+  let botonPlanta = document.getElementById("boton-planta");
+  botonPlanta.disabled = true;
 }
 
 function reiniciarJuego() {
