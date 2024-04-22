@@ -70,6 +70,21 @@ function ataqueAleatorioEnemigo() {
   } else {
     ataqueEnemigo = "PLANTA";
   }
+
+  crearMensaje();
+}
+
+function crearMensaje() {
+  let sectionMensajes = document.getElementById("mensajes");
+  let parrafo = document.createElement("p");
+  parrafo.innerHTML =
+    "Tu mascota atacó con " +
+    ataqueJugador +
+    " la mascota del enemigo atacó con " +
+    ataqueEnemigo +
+    " - PENDIENTE ";
+
+  sectionMensajes.appendChild(parrafo);
 }
 
 function aleatorio(min, max) {
