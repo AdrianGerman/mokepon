@@ -100,6 +100,16 @@ function combate() {
     vidasJugador--;
     spanVidasJugador.innerHTML = vidasJugador;
   }
+
+  revisarVidas();
+}
+
+function revisarVidas() {
+  if (vidasEnemigo == 0) {
+    crearMensajeFinal("FELICITACIONES! Ganaste :)");
+  } else if (vidasJugador == 0) {
+    crearMensajeFinal("UPPPS! Al parecer eres un loser :D");
+  }
 }
 
 function crearMensaje(resultado) {
@@ -114,6 +124,15 @@ function crearMensaje(resultado) {
     ataqueEnemigo +
     " - " +
     resultado;
+
+  sectionMensajes.appendChild(parrafo);
+}
+
+function crearMensajeFinal(resultadoFinal) {
+  let sectionMensajes = document.getElementById("mensajes");
+
+  let parrafo = document.createElement("p");
+  parrafo.innerHTML = resultadoFinal;
 
   sectionMensajes.appendChild(parrafo);
 }
