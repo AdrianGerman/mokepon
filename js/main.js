@@ -14,6 +14,9 @@ function iniciarJuego() {
   botonAgua.addEventListener("click", ataqueAgua);
   let botonPlanta = document.getElementById("boton-planta");
   botonPlanta.addEventListener("click", ataquePlanta);
+
+  let botonReiniciar = document.getElementById("boton-reiniciar");
+  botonReiniciar.addEventListener("click", reiniciarJuego);
 }
 
 function seleccionarMascotaJugador() {
@@ -135,6 +138,10 @@ function crearMensajeFinal(resultadoFinal) {
   parrafo.innerHTML = resultadoFinal;
 
   sectionMensajes.appendChild(parrafo);
+}
+
+function reiniciarJuego() {
+  location.reload();
 }
 
 function aleatorio(min, max) {
