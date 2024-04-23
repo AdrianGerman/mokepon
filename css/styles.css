@@ -48,7 +48,7 @@ input {
   align-items: center;
 }
 
-#seleccionar-mokepon h2 {
+h2 {
   font-size: 3rem;
 }
 
@@ -115,4 +115,29 @@ input:checked + .tarjeta-de-mokepon {
 #boton-mascota:hover {
   cursor: pointer;
   background: #160131;
+}
+
+#seleccionar-ataque {
+  flex-direction: column;
+  align-items: center;
+}
+
+#seleccionar-ataque div {
+  margin: 2rem;
+}
+
+.boton-de-ataque {
+  font-family: "RocknRoll One", sans-serif;
+  cursor: pointer;
+  background-color: #0e46a3;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 180px;
+  color: white;
+}
+
+.boton-de-ataque:hover {
+  background-color: #160131;
 }
