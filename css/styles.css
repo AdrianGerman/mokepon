@@ -3,3 +3,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#seleccionar-mokepon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
