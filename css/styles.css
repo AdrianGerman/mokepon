@@ -141,3 +141,23 @@ input:checked + .tarjeta-de-mokepon {
 .boton-de-ataque:hover {
   background-color: #160131;
 }
+
+#mensajes {
+  width: 280px;
+  background: #160131;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boton-reiniciar {
+  background: transparent;
+  border: none;
+  color: #b5b5b5;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "RocknRoll One", sans-serif;
+}
