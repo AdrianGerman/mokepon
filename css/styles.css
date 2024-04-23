@@ -1,5 +1,6 @@
 :root {
   --color-background: #1e0342;
+  --second-color: #0e46a3;
 }
 
 * {
@@ -52,4 +53,17 @@ body {
   display: flex;
   gap: 1rem;
   margin: 4rem;
+}
+
+.tarjeta-de-mokepon {
+  width: 100px;
+  height: 100px;
+  background-color: var(--second-color);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+input {
+  display: none;
 }
