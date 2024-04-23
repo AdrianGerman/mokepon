@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section id="seleccionar-mokepon">
+    <section class="title-section">
       <h1 class="title">MOKEPON! 🔥💧🌱</h1>
+    </section>
+    <section id="seleccionar-mokepon">
       <h2>Elige tu mascota:</h2>
 
       <input type="radio" name="mascota" id="hipodoge" />
-      <label for="hipodoge">Hipodoge</label>
+      <label class="tarjeta-de-mokepon" for="hipodoge">Hipodoge</label>
 
       <input type="radio" name="mascota" id="capipepo" />
-      <label for="capipepo">Capipepo</label>
+      <label class="tarjeta-de-mokepon" for="capipepo">Capipepo</label>
 
       <input type="radio" name="mascota" id="ratigueya" />
-      <label for="ratigueya">Ratigueya</label>
+      <label class="tarjeta-de-mokepon" for="ratigueya">Ratigueya</label>
 
       <button id="boton-mascota">Seleccionar</button>
     </section>
@@ -27,16 +29,6 @@
     <section id="seleccionar-ataque">
       <h2>Elige tu ataque:</h2>
 
-      <section id="mensajes"></section>
-
-      <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
-      </section>
-      <div>
-        <button id="boton-fuego">Fuego 🔥</button>
-        <button id="boton-agua">Agua 💧</button>
-        <button id="boton-planta">Planta 🌱</button>
-      </div>
       <p>
         Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas
       </p>
@@ -44,6 +36,17 @@
         La mascota <span id="mascota-enemigo"></span> del enemigo tiene
         <span id="vidas-enemigo">3</span> vidas
       </p>
+
+      <p>
+        <button id="boton-fuego">Fuego 🔥</button>
+        <button id="boton-agua">Agua 💧</button>
+        <button id="boton-planta">Planta 🌱</button>
+      </p>
+    </section>
+    <section id="mensajes"></section>
+
+    <section id="reiniciar">
+      <button id="boton-reiniciar">Reiniciar</button>
     </section>
   </body>
 </html>
