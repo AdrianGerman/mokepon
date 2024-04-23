@@ -50,12 +50,11 @@ input {
 
 #seleccionar-mokepon h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .mokepones {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 4rem;
 }
 
@@ -69,6 +68,16 @@ input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .tarjeta-de-mokepon {
+  box-shadow: 10px 10px 10px rgb(111, 2, 78); /* Por ejemplo, un efecto de sombra */
+}
+
+.tarjeta-de-mokepon:hover {
+  transform: scale(1.1);
 }
 
 .tarjeta-de-mokepon:nth-child(2) {
@@ -91,4 +100,19 @@ input {
   justify-content: center;
   align-items: center;
   width: 160px;
+}
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+#boton-mascota:hover {
+  cursor: pointer;
+  background: #160131;
 }
