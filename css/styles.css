@@ -1,13 +1,39 @@
+:root {
+  --color-background: #1e0342;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html,
+body {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--color-background);
+  color: white;
+}
+
+.total {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .title-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
+}
+
+.title-section h1 {
+  font-size: 4rem;
 }
 
 #seleccionar-mokepon {
@@ -15,4 +41,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#seleccionar-mokepon h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mokepones {
+  display: flex;
+  gap: 1rem;
+  margin: 4rem;
 }
