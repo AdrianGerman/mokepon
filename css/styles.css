@@ -52,7 +52,8 @@ h2 {
   font-size: 3rem;
 }
 
-.mokepones {
+.mokepones,
+.tarjetas-ataque {
   display: flex;
   gap: 1.5rem;
   margin: 4rem;
@@ -180,4 +181,18 @@ input:checked + .tarjeta-de-mokepon {
 #vidas-enemigo {
   font-size: 32px;
   margin-bottom: 0;
+}
+
+.ataques-jugador,
+.ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .mokepones,
+  .tarjetas-ataque {
+    flex-direction: column;
+  }
 }
