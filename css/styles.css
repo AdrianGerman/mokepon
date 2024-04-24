@@ -161,3 +161,23 @@ input:checked + .tarjeta-de-mokepon {
   cursor: pointer;
   font-family: "RocknRoll One", sans-serif;
 }
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+.ataques div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
