@@ -7,9 +7,7 @@ const botonPlanta = document.getElementById("boton-planta");
 const botonReiniciar = document.getElementById("boton-reiniciar");
 
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mokepon");
-const inputHipodoge = document.getElementById("hipodoge");
-const inputCapipepo = document.getElementById("capipepo");
-const inputRatigueya = document.getElementById("ratigueya");
+
 const spanMascotaJugador = document.getElementById("mascota-jugador");
 
 const spanMascotaEnemigo = document.getElementById("mascota-enemigo");
@@ -27,6 +25,10 @@ let mokepones = [];
 let ataqueJugador;
 let ataqueEnemigo;
 let opcionDeMokepones;
+
+let inputHipodoge;
+let inputCapipepo;
+let inputRatigueya;
 
 let vidasJugador = 3;
 let vidasEnemigo = 3;
@@ -83,6 +85,10 @@ function iniciarJuego() {
     </label>
     `;
     contenedorTarjetas.innerHTML += opcionDeMokepones;
+
+    inputHipodoge = document.getElementById("Hipodoge");
+    inputCapipepo = document.getElementById("Capipepo");
+    inputRatigueya = document.getElementById("Ratigueya");
   });
 
   botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
