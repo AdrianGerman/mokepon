@@ -21,9 +21,12 @@ const sectionMensajes = document.getElementById("resultado");
 const ataquesDelJugador = document.getElementById("ataques-del-jugador");
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo");
 
+const contenedorTarjetas = document.getElementById("contenedorTarjetas");
+
 let mokepones = [];
 let ataqueJugador;
 let ataqueEnemigo;
+let opcionDeMokepones;
 
 let vidasJugador = 3;
 let vidasEnemigo = 3;
@@ -65,9 +68,23 @@ ratigueya.ataques.push(
   { nombre: "🌱", id: "boton-planta" }
 );
 
+mokepones.push(hipodoge, capipepo, ratigueya);
+
 function iniciarJuego() {
   sectionSeleccionarAtaque.style.display = "none";
   sectionReiniciar.style.display = "none";
+
+  mokepones.forEach((mokepon) => {
+    opcionDeMokepones = `
+    <input type="radio" name="mascota" id=${mokepon.nombre} />
+    <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
+        <p>${mokepon.nombre}</p>
+        <img src=${mokepon.foto} alt=${mokepon.nombre}>
+    </label>
+    `;
+    contenedorTarjetas.innerHTML += opcionDeMokepones;
+  });
+
   botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
   botonFuego.addEventListener("click", ataqueFuego);
   botonAgua.addEventListener("click", ataqueAgua);
