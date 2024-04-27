@@ -33,6 +33,7 @@ let inputHipodoge;
 let inputCapipepo;
 let inputRatigueya;
 let mascotaJugador;
+let mascotaJugadorObjeto;
 
 let ataquesMokepon;
 let ataquesMokeponEnemigo;
@@ -50,6 +51,8 @@ let vidasJugador = 3;
 let vidasEnemigo = 3;
 let lienzo = mapa.getContext("2d");
 let intervalo;
+let mapaBackground = new Image();
+mapaBackground.src = "../img/mokemap.png";
 
 class Mokepon {
   constructor(nombre, foto, vida) {
