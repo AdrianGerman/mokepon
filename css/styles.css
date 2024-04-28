@@ -202,6 +202,22 @@ input:checked + .tarjeta-de-mokepon {
   border: 2px solid white;
 } */
 
+#ver-mapa button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: "RocknRoll One", sans-serif;
+  margin: 10px 0;
+}
+
+#ver-mapa button:hover {
+  cursor: pointer;
+  background: var(--color-select);
+}
+
 @media (max-width: 860px) {
   .total {
     height: 100%;
@@ -225,5 +241,13 @@ input:checked + .tarjeta-de-mokepon {
 
   #boton-mascota {
     margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #ver-mapa div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
