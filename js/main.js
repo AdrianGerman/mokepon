@@ -181,9 +181,6 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador() {
-  sectionSeleccionarMascota.style.display = "none";
-  // sectionSeleccionarAtaque.style.display = "flex";
-
   if (inputHipodoge.checked) {
     spanMascotaJugador.innerHTML = inputHipodoge.id;
     mascotaJugador = inputHipodoge.id;
@@ -195,7 +192,9 @@ function seleccionarMascotaJugador() {
     mascotaJugador = inputRatigueya.id;
   } else {
     alert("Upps! No has seleccionado ninguna mascota");
+    return;
   }
+  sectionSeleccionarMascota.style.display = "none";
   seleccionarMokepon(mascotaJugador);
   extraerAtaques(mascotaJugador);
   sectionVerMapa.style.display = "flex";
@@ -396,14 +395,11 @@ function pintarCanvas() {
   mascotaJugadorObjeto.pintarMokepon();
   enviarPosicion(mascotaJugadorObjeto.x, mascotaJugadorObjeto.y);
   mokeponesEnemigos.forEach(function (mokepon) {
-    mokepon.pintarMokepon();
-    revisarColision(mokepon);
+    if (mokepon != undefined) {
+      mokepon.pintarMokepon();
+      revisarColision(mokepon);
+    }
   });
-  if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0) {
-    revisarColision(hipodogeEnemigo);
-    revisarColision(capipepoEnemigo);
-    revisarColision(ratigueyaEnemigo);
-  }
 }
 
 function enviarPosicion(x, y) {
@@ -422,37 +418,39 @@ function enviarPosicion(x, y) {
         console.log(enemigos);
         mokeponesEnemigos = enemigos.map(function (enemigo) {
           let mokeponEnemigo = null;
-          const mokeponNombre = enemigo.mokepon.nombre || "";
-          if (mokeponNombre === "Hipodoge") {
-            mokeponEnemigo = new Mokepon(
-              "Hipodoge",
-              "../img/mokepones/hipodoge.png",
-              5,
-              "../img/mokepersonaje/hipodoge-mini.png",
-              enemigo.id
-            );
-          } else if (mokeponNombre === "Capipepo") {
-            mokeponEnemigo = new Mokepon(
-              "Capipepo",
-              "../img/mokepones/capipepo.png",
-              5,
-              "../img/mokepersonaje/capipepo-mini.png",
-              enemigo.id
-            );
-          } else if (mokeponNombre === "Ratigueya") {
-            mokeponEnemigo = new Mokepon(
-              "Ratigueya",
-              "../img/mokepones/ratigueya.png",
-              5,
-              "../img/mokepersonaje/ratigueya-mini.png",
-              enemigo.id
-            );
+          if (enemigo.mokepon != undefined) {
+            const mokeponNombre = enemigo.mokepon.nombre || "";
+            if (mokeponNombre === "Hipodoge") {
+              mokeponEnemigo = new Mokepon(
+                "Hipodoge",
+                "../img/mokepones/hipodoge.png",
+                5,
+                "../img/mokepersonaje/hipodoge-mini.png",
+                enemigo.id
+              );
+            } else if (mokeponNombre === "Capipepo") {
+              mokeponEnemigo = new Mokepon(
+                "Capipepo",
+                "../img/mokepones/capipepo.png",
+                5,
+                "../img/mokepersonaje/capipepo-mini.png",
+                enemigo.id
+              );
+            } else if (mokeponNombre === "Ratigueya") {
+              mokeponEnemigo = new Mokepon(
+                "Ratigueya",
+                "../img/mokepones/ratigueya.png",
+                5,
+                "../img/mokepersonaje/ratigueya-mini.png",
+                enemigo.id
+              );
+            }
+
+            mokeponEnemigo.x = enemigo.x;
+            mokeponEnemigo.y = enemigo.y;
+
+            return mokeponEnemigo;
           }
-
-          mokeponEnemigo.x = enemigo.x;
-          mokeponEnemigo.y = enemigo.y;
-
-          return mokeponEnemigo;
         });
       });
     }
