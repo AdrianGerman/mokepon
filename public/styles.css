@@ -1,0 +1,253 @@
+:root {
+  --color-background: #1e0342;
+  --second-color: #0e46a3;
+  --color-select: #6f024e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--color-background);
+  color: white;
+}
+
+input {
+  display: none;
+}
+
+.total {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+}
+
+#seleccionar-mokepon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.mokepones,
+.tarjetas-ataque {
+  display: flex;
+  gap: 1.5rem;
+  margin: 4rem;
+}
+
+.tarjeta-de-mokepon {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .tarjeta-de-mokepon {
+  background-color: var(--color-select);
+}
+
+.tarjeta-de-mokepon:hover {
+  transform: scale(1.1);
+}
+
+.tarjeta-de-mokepon:nth-child(2) {
+  background-color: var(--second-color);
+}
+
+.tarjeta-de-mokepon:nth-child(4) {
+  background-color: #0d770d;
+}
+
+.tarjeta-de-mokepon:nth-child(6) {
+  background-color: #b30c0c;
+}
+
+.tarjeta-de-mokepon p {
+  font-size: 1rem;
+}
+
+.tarjeta-de-mokepon img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+}
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+#boton-mascota:hover {
+  cursor: pointer;
+  background: var(--color-select);
+}
+
+#seleccionar-ataque {
+  flex-direction: column;
+  align-items: center;
+}
+
+#seleccionar-ataque div {
+  margin: 2rem;
+}
+
+.boton-de-ataque {
+  font-family: "RocknRoll One", sans-serif;
+  cursor: pointer;
+  background-color: #0e46a3;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 100px;
+  color: white;
+}
+
+.boton-de-ataque:hover {
+  background-color: #160131;
+}
+
+#mensajes {
+  width: 280px;
+  background: #160131;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boton-reiniciar {
+  background: transparent;
+  border: none;
+  color: #b5b5b5;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+.ataques div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador,
+.ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+#mapa {
+  border: 2px solid white;
+} */
+
+#ver-mapa button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: "RocknRoll One", sans-serif;
+  margin: 10px 0;
+}
+
+#ver-mapa button:hover {
+  cursor: pointer;
+  background: var(--color-select);
+}
+
+@media (max-width: 860px) {
+  .total {
+    height: 100%;
+  }
+
+  .title-section h1 {
+    margin-top: 0rem;
+  }
+  .title-section {
+    margin: 2rem;
+  }
+
+  .mokepones,
+  .tarjetas-ataque {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #boton-mascota {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #ver-mapa div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
